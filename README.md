@@ -6,4 +6,4 @@ https://raw.githubusercontent.com/rdnsparham-rgb/v2ray-config/refs/heads/main/co
 ```
 ---
 | پرهام | دان |
-|---|
+| --- |
