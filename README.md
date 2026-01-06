@@ -4,4 +4,5 @@ config :
 ```text
 https://raw.githubusercontent.com/rdnsparham-rgb/v2ray-config/refs/heads/main/configfars.txt
 ```
-iran
+def greet():
+    print("سلام دنیا")
