@@ -5,4 +5,5 @@ config :
 https://raw.githubusercontent.com/rdnsparham-rgb/v2ray-config/refs/heads/main/configfars.txt
 ```
 ---
-| پرهام | ۱۲ | ایران |
+| پرهام | دان |
+|---|
