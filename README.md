@@ -5,7 +5,5 @@ config :
 https://raw.githubusercontent.com/rdnsparham-rgb/v2ray-config/refs/heads/main/configfars.txt
 ```
 ---
-| نام | سن | شهر |
+| ایران | کشور من |
 | --- | --- | --- |
-| پرهام | 12 | تهران |
-| علی | 14 | اصفهان |
