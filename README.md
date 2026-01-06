@@ -2,5 +2,5 @@
 # کانفیگ v2ray رایگان از طرف کانال کانفیگ فارس!
 config :
 ```text
-این متن برای کپی کردن است
+https://raw.githubusercontent.com/rdnsparham-rgb/v2ray-config/refs/heads/main/configfars.txt
 ```
