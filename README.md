@@ -7,6 +7,6 @@ https://raw.githubusercontent.com/rdnsparham-rgb/v2ray-config/refs/heads/main/co
 ---
 | کشور | اسم |
 | --- | --- |
-| configfars | iran |
+| IRAN | configfars |
 | موقعیت | سال |
 | جنگ | 2025 |
