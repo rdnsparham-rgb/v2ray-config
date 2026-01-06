@@ -5,7 +5,7 @@ config :
 https://raw.githubusercontent.com/rdnsparham-rgb/v2ray-config/refs/heads/main/configfars.txt
 ```
 ---
-| اسم | کشور |
+| کشور | اسم |
 | configfars | iran |
-| --- | --- |
-| 2025 | 
+| موقعیت | سال |
+| جنگ | 2025 |
