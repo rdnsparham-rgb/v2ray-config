@@ -1,29 +1,63 @@
-name: Extract OneChance HTML
+name: Download One Chance Game
 
 on:
   workflow_dispatch:
 
 jobs:
-  extract:
+  build:
     runs-on: ubuntu-latest
 
     permissions:
       contents: write
 
     steps:
-      - name: Checkout Repo
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
       - name: Download HTML
         run: |
           curl -L "https://flashstorage.games/one-chance.html" -o index.html
 
+      - name: Download SWF Game
+        run: |
+          curl -L "https://flashga.me/public/storage/games/FLASHJanuary2022/one-chance.swf" -o one-chance.swf
+
+      - name: Create Simple Offline Player
+        run: |
+          cat > play.html << 'EOF'
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <meta charset="UTF-8">
+            <title>One Chance Offline</title>
+            <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+            <style>
+              html,body{
+                margin:0;
+                width:100%;
+                height:100%;
+                background:black;
+                overflow:hidden;
+              }
+              embed{
+                width:100%;
+                height:100%;
+              }
+            </style>
+          </head>
+          <body>
+            <embed src="one-chance.swf">
+          </body>
+          </html>
+          EOF
+
       - name: Commit Files
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
 
-          git add index.html
-          git commit -m "Update extracted HTML" || echo "No changes"
+          git add index.html one-chance.swf play.html
+
+          git commit -m "Downloaded One Chance offline files" || echo "No changes"
 
           git push
