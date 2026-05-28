@@ -1,0 +1,29 @@
+name: Extract OneChance HTML
+
+on:
+  workflow_dispatch:
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Download HTML
+        run: |
+          curl -L "https://flashstorage.games/one-chance.html" -o index.html
+
+      - name: Commit Files
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+
+          git add index.html
+          git commit -m "Update extracted HTML" || echo "No changes"
+
+          git push
